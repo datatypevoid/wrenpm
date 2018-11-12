@@ -1,28 +1,29 @@
 {
-  "name": "wrenpm",
-  "version": "0.0.0",
-  "description": "A package manager for Wren",
-  "preferGlobal": true,
-  "main": "cli.js",
-  "bin": {
-    "wrenpm": "cli.js"
-  },
-  "dependencies": {
-    "git-clone": "^0.1.0",
-    "is-existing-file": "^1.0.0",
-    "meow": "^3.3.0",
-    "toml": "^2.3.0"
-  },
-  "devDependencies": {
-    "mocha": "^2.3.3",
-    "should": "^7.1.0",
-    "standard": "^5.3.1"
-  },
-  "scripts": {
-    "test": "standard && mocha"
-  },
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "license": "MIT"
+	"name": "wrenpm",
+	"version": "0.0.0",
+	"description": "A package manager for Wren",
+	"license": "MIT",
+	"main": "cli.js",
+	"bin": {
+		"wrenpm": "cli.js"
+	},
+	"scripts": {
+		"postversion": "git push && git push --tags",
+		"test": "standard && mocha"
+	},
+	"dependencies": {
+		"git-clone": "^0.1.0",
+		"is-existing-file": "^1.0.0",
+		"meow": "^3.3.0",
+		"toml": "^2.3.0"
+	},
+	"devDependencies": {
+		"mocha": "^2.3.3",
+		"should": "^7.1.0",
+		"standard": "^5.3.1"
+	},
+	"engines": {
+		"node": ">=4.0.0"
+	},
+	"preferGlobal": true
 }
